@@ -51,7 +51,7 @@
             <td>{{ $purch->quantity }}</td>
             <td>{{ $purch->rate }}</td>
             <td>{{ $purch->quantity*$purch->rate }}</td>
-            <td><button type="button" data-toggle="tooltip" data-placement="top" title='Voucher Image' class=" btn btn-sm btn-info" value="{{ route('purchase.edit',$purch->id) }}" ><i class="fa fa-file-image-o"> </i></button></td>
+            <td><a href="{{ route('purchase.show',$purch->id) }}" data-toggle="tooltip" data-placement="top" title='Voucher Image' class=" btn btn-sm btn-info" target="_blank"><i class="fa fa-file-image-o" aria-hidden="true"></i></a></td>
             {{-- <td><img class="img-profile rounded-circle" width="70" height="40" src="{{ asset('public/Purchase/'. $purch->file ) }}" alt="Photo Not Found" target="_blank" ></td> --}}
             <td>{{ $purch->getUser->name }}</td>
             <td>

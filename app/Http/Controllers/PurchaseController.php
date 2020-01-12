@@ -92,9 +92,10 @@ class PurchaseController extends Controller
      * @param  \App\Purchase  $purchase
      * @return \Illuminate\Http\Response
      */
-    public function show(Purchase $purchase)
+    public function show($purch_id)
     {
-        //
+        $imga = Purchase::findOrfail($purch_id);
+        return view('admin.purchase.view', compact('imga') );
     }
 
     /**
