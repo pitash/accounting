@@ -10,7 +10,7 @@
     <div class="panel-heading">
       <div class="row">
         <div class="col-md-10">
-          <p class="m-n font-thin h3 text-primary"><i class="fa fa-credit-card"></i> &nbspPurchase Voucher List</p>
+          <p class="m-n font-thin h3 text-primary"><i class="fa fa-credit-card"></i> &nbspPurchase Order List</p>
         </div>
         <div class="col-md-2">
           <a style="font-size: 14px;" href="{{ route('purchase.create') }}" class="btn btn-primary btn-sm"><i
@@ -51,7 +51,8 @@
             <td>{{ $purch->quantity }}</td>
             <td>{{ $purch->rate }}</td>
             <td>{{ $purch->quantity*$purch->rate }}</td>
-            <td><img class="img-profile rounded-circle" width="70" height="40" src="{{ asset('public/Purchase/'. $purch->file ) }}" alt="Photo Not Found" target="_blank" ></td>
+            <td><button type="button" data-toggle="tooltip" data-placement="top" title='Voucher Image' class=" btn btn-sm btn-info" value="{{ route('purchase.edit',$purch->id) }}" ><i class="fa fa-file-image-o"> </i></button></td>
+            {{-- <td><img class="img-profile rounded-circle" width="70" height="40" src="{{ asset('public/Purchase/'. $purch->file ) }}" alt="Photo Not Found" target="_blank" ></td> --}}
             <td>{{ $purch->getUser->name }}</td>
             <td>
               <form action="{{ route('purchase.destroy',$purch->id) }}" method="POST">
