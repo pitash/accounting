@@ -1,0 +1,14 @@
+.white{
+	background:#fff !important;
+}
+
+.right{
+	float:right;
+}
+.left{
+	float: left;
+}
+
+.mr-top{
+	margin-top:-6px;
+}
